@@ -4,9 +4,9 @@
   "description": "Native Facebook Ads for React Native",
   "repository": {
     "type": "git",
-    "url": "https://github.com/callstack/react-native-fbads"
+    "url": "https://github.com/wooseopkim/react-native-fbads"
   },
-  "homepage": "https://github.com/callstack/react-native-fbads",
+  "homepage": "https://github.com/wooseopkim/react-native-fbads",
   "main": "src/index.ts",
   "directories": {
     "example": "example"
