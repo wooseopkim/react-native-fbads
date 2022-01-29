@@ -1,0 +1,25 @@
+{
+    "env": {
+        "es6": true
+    },
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "project": "tsconfig.json",
+        "sourceType": "module"
+    },
+    "extends": [
+        "airbnb",
+        "airbnb-typescript",
+        "plugin:import/typescript"
+    ],
+    "plugins": [
+        "eslint-plugin-react",
+        "@typescript-eslint",
+        "prettier"
+    ],
+    "rules": {
+        "no-unused-vars": "off",
+        "@typescript-eslint/no-unused-vars": "error",
+        "no-restricted-syntax": "off"
+    }
+}

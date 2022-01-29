@@ -71,7 +71,7 @@ export default {
    */
   async requestTrackingPermission(): Promise<TrackingStatus> {
     if (Platform.OS !== 'ios') return 'unavailable';
-    return await CTKAdSettingsManager.requestTrackingPermission();
+    return CTKAdSettingsManager.requestTrackingPermission();
   },
   /**
    * Gets the current tracking status.
@@ -80,18 +80,21 @@ export default {
    */
   async getTrackingStatus(): Promise<TrackingStatus> {
     if (Platform.OS !== 'ios') return 'unavailable';
-    return await CTKAdSettingsManager.getTrackingStatus();
+    return CTKAdSettingsManager.getTrackingStatus();
   },
 
   /**
-   * Enable or disable the automatic Advertiser ID Collection. On iOS 14 it is recommended to only enable automatic Advertiser ID Collection when the user has granted permission to track. (@see `requestTrackingPermission()`)
+   * Enable or disable the automatic Advertiser ID Collection. On iOS 14 it is
+   * recommended to only enable automatic Advertiser ID Collection when the user
+   * has granted permission to track. (@see `requestTrackingPermission()`)
    */
   setAdvertiserIDCollectionEnabled(enabled: boolean): void {
     CTKAdSettingsManager.setAdvertiserIDCollectionEnabled(enabled);
   },
 
   /**
-   * Enable or disable ads tracking. Only works for iOS 14+. In order to ask user for tracking permission (@see `requestTrackingPermission()`).
+   * Enable or disable ads tracking. Only works for iOS 14+. In order to ask user
+   * for tracking permission (@see `requestTrackingPermission()`).
    */
   setAdvertiserTrackingEnabled(enabled: boolean): void {
     if (Platform.OS !== 'ios') {

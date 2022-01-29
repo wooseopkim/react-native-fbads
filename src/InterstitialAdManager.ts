@@ -22,5 +22,5 @@ export default {
    */
   showPreloadedAd(placementId: string): Promise<boolean> {
     return CTKInterstitialAdManager.showPreloadedAd(placementId);
-  }
+  },
 };

@@ -15,13 +15,14 @@ export default class NativeAdsManager {
 
   // Indicates whether AdsManager is ready to serve ads
   private isValid: boolean = false;
+
   private eventEmitter: EventEmitter = new EventEmitter();
 
   static async registerViewsForInteractionAsync(
     nativeAdViewTag: number,
     mediaViewTag: number,
     adIconViewTag: number,
-    clickable: number[]
+    clickable: number[],
   ) {
     if (adIconViewTag > 0 && mediaViewTag > 0) {
       clickable.push(mediaViewTag, adIconViewTag);
@@ -34,7 +35,7 @@ export default class NativeAdsManager {
       nativeAdViewTag,
       mediaViewTag,
       adIconViewTag,
-      clickable
+      clickable,
     );
     return result;
   }
@@ -68,7 +69,7 @@ export default class NativeAdsManager {
           this.isValid = true;
           this.eventEmitter.emit(EVENT_DID_BECOME_VALID);
         }
-      }
+      },
     );
   }
 
@@ -95,7 +96,7 @@ export default class NativeAdsManager {
       return {
         context: null,
         listener: () => {},
-        remove: () => {}
+        remove: () => {},
       };
     }
 
